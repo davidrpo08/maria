@@ -159,7 +159,7 @@ export function Contact() {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+                      access_key: "50d8032a-5f54-491f-9522-5236d1d14955",
                       name: (form.elements.namedItem("name") as HTMLInputElement).value,
                       email: (form.elements.namedItem("email") as HTMLInputElement).value,
                       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
