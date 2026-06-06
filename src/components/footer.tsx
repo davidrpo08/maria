@@ -64,10 +64,10 @@ export function Footer() {
               Asesoría estratégica corporativa para empresas que exigen el más alto estándar de servicio.
             </p>
             <a
-              href="mailto:info@betancurglobaladvisory.com"
+              href="mailto:ceo@betancurglobaladvisory.com"
               className="text-white/40 text-sm hover:text-white transition-colors"
             >
-              info@betancurglobaladvisory.com
+              ceo@betancurglobaladvisory.com
             </a>
           </motion.div>
 
