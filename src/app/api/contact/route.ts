@@ -7,8 +7,8 @@ export async function POST(req: NextRequest) {
   const { name, email, phone, interests, message } = await req.json();
 
   const { error } = await resend.emails.send({
-    from: "Betancur Global Advisory <onboarding@resend.dev>",
-    to: "info@betancurglobaladvisory.com",
+    from: "Betancur Global Advisory <formulario@betancurglobaladvisory.com>",
+    to: "ceo@betancurglobaladvisory.com",
     replyTo: email,
     subject: `Nuevo mensaje de ${name}`,
     html: `

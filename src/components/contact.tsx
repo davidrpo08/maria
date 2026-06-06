@@ -112,7 +112,7 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-12 space-y-4 text-black/40 text-sm"
           >
-            <p>info@betancurglobaladvisory.com</p>
+            <p>ceo@betancurglobaladvisory.com</p>
             <a
               href="https://www.linkedin.com/in/mar%C3%ADa-elisa-betancur-ab7b27356"
               target="_blank"
@@ -155,20 +155,22 @@ export function Contact() {
                   setLoading(true);
                   setError(false);
                   const form = e.currentTarget;
-                  const data = {
-                    name: (form.elements.namedItem("name") as HTMLInputElement).value,
-                    email: (form.elements.namedItem("email") as HTMLInputElement).value,
-                    phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
-                    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
-                    interests: selected,
-                  };
-                  const res = await fetch("/api/contact", {
+                  const res = await fetch("https://api.web3forms.com/submit", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(data),
+                    body: JSON.stringify({
+                      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+                      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+                      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+                      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+                      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+                      interests: selected.join(", "),
+                      subject: "Nuevo mensaje — Betancur Global Advisory",
+                    }),
                   });
+                  const json = await res.json();
                   setLoading(false);
-                  if (res.ok) setSent(true);
+                  if (json.success) setSent(true);
                   else setError(true);
                 }}
                 className="grid grid-cols-2 gap-x-8 gap-y-10"
