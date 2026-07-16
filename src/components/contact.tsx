@@ -83,7 +83,7 @@ export function Contact() {
     setSelected((prev) => prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]);
 
   return (
-    <section className="bg-[#f0f0ec] px-6 md:px-10 py-32 border-t border-black/[0.06]">
+    <section id="contact" className="bg-[#f0f0ec] px-6 md:px-10 py-32 border-t border-black/[0.06] scroll-mt-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
           <motion.p

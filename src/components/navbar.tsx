@@ -7,9 +7,9 @@ import Image from "next/image";
 
 const links = [
   { label: "Casos", href: "/work" },
-  { label: "Servicios", href: "/services" },
-  { label: "Nosotros", href: "/about" },
-  { label: "Contacto", href: "/contact" },
+  { label: "Servicios", href: "/#services" },
+  { label: "Nosotros", href: "/#trajectory" },
+  { label: "Contacto", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -71,7 +71,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-6">
             <Link
-              href="/contact"
+              href="/#contact"
               className="hidden md:inline-flex items-center gap-2 rounded-full border border-[#C4983A]/40 px-6 py-2.5 text-sm text-[#C4983A] tracking-wide transition-all hover:border-[#C4983A] hover:bg-[#C4983A]/5"
             >
               Hablemos

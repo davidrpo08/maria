@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 const services = [
   {
@@ -23,43 +22,30 @@ const services = [
 
 export function Services() {
   return (
-    <section className="bg-[#fafaf8] px-6 md:px-10 py-32 border-t border-black/[0.06]">
+    <section id="services" className="bg-[#fafaf8] px-6 md:px-10 py-32 border-t border-black/[0.06] scroll-mt-24">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="flex items-end justify-between mb-16">
-          <div>
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-[#C4983A] text-xs uppercase tracking-[0.3em] mb-3 flex items-center gap-2"
-            >
-              <span className="inline-block w-5 h-px bg-[#C4983A]" />
-              Lo que hacemos
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-[#0f1e3a] text-3xl md:text-5xl font-bold tracking-tight"
-            >
-              Nuestros servicios
-            </motion.h2>
-          </div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+        <div className="mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="text-[#C4983A] text-xs uppercase tracking-[0.3em] mb-3 flex items-center gap-2"
           >
-            <Link href="/services" className="group hidden md:inline-flex items-center gap-2 text-black/30 text-sm hover:text-[#C4983A] transition-colors">
-              Ver todos
-              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </Link>
-          </motion.div>
+            <span className="inline-block w-5 h-px bg-[#C4983A]" />
+            Lo que hacemos
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="text-[#0f1e3a] text-3xl md:text-5xl font-bold tracking-tight"
+          >
+            Nuestros servicios
+          </motion.h2>
         </div>
 
         {/* Cards */}

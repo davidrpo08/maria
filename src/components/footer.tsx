@@ -8,17 +8,17 @@ const links = [
   {
     heading: "Servicios",
     items: [
-      { label: "Consultoría Financiera", href: "/services" },
-      { label: "Comercial & Mercadeo", href: "/services" },
-      { label: "Consultoría ONU", href: "/services" },
+      { label: "Consultoría Financiera", href: "/#services" },
+      { label: "Comercial & Mercadeo", href: "/#services" },
+      { label: "Consultoría ONU", href: "/#services" },
     ],
   },
   {
     heading: "Compañía",
     items: [
       { label: "Casos", href: "/work" },
-      { label: "Nosotros", href: "/about" },
-      { label: "Contacto", href: "/contact" },
+      { label: "Nosotros", href: "/#trajectory" },
+      { label: "Contacto", href: "/#contact" },
     ],
   },
 ];

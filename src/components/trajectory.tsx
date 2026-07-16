@@ -32,7 +32,7 @@ const milestones = [
 
 export function Trajectory() {
   return (
-    <section className="bg-[#fafaf8] px-6 md:px-10 py-32 border-t border-black/[0.06]">
+    <section id="trajectory" className="bg-[#fafaf8] px-6 md:px-10 py-32 border-t border-black/[0.06] scroll-mt-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-20 items-start">
 
         {/* Left — encabezado */}

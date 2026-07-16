@@ -105,7 +105,7 @@ export function Hero() {
             className="mt-10 flex items-center gap-4"
           >
             <Link
-              href="/contact"
+              href="/#contact"
               className="rounded-full bg-[#0f1e3a] px-8 py-4 text-base font-medium text-white hover:bg-[#1a2e5a] transition-colors"
             >
               Hablemos
